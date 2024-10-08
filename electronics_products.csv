@@ -1,0 +1,21 @@
+id,name,description,price,quantity
+1,Smartphone A,Latest smartphone with 128GB storage and 6GB RAM,1159.05,137
+2,Smartphone B,Affordable smartphone with great camera quality,1408.89,115
+3,Laptop A,High-performance laptop for gaming and work,486.2,264
+4,Laptop B,Sleek laptop with 16GB RAM and fast SSD,633.56,237
+5,Tablet A,Portable tablet with excellent battery life,998.96,150
+6,Smartwatch A,Smartwatch with fitness tracking features,819.33,165
+7,Headphones A,Noise-cancelling headphones with wireless capability,1204.0,20
+8,Headphones B,Premium over-ear headphones with rich sound,1252.32,76
+9,Smart TV A,55-inch Smart TV with 4K resolution,560.1,130
+10,Smart TV B,65-inch Smart TV with HDR support,1435.13,246
+11,Bluetooth Speaker A,Portable Bluetooth speaker with great sound,96.91,110
+12,Bluetooth Speaker B,Compact Bluetooth speaker with long battery life,523.36,170
+13,Camera A,DSLR camera with 24MP sensor and HD video,639.13,117
+14,Camera B,Mirrorless camera with interchangeable lenses,563.38,88
+15,Game Console A,Next-gen gaming console with immersive graphics,1239.44,157
+16,Game Console B,Handheld gaming console with a wide game library,1111.34,288
+17,Drone A,High-performance drone with HD camera,1285.84,287
+18,Printer A,All-in-one printer with scanning and copying features,1036.25,291
+19,Monitor A,27-inch monitor with 144Hz refresh rate,553.88,138
+20,External Hard Drive A,2TB external hard drive for secure storage,943.65,143
