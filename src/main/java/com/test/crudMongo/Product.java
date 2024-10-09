@@ -1,29 +1,29 @@
 package com.test.crudMongo;
 
+import com.mongodb.lang.NonNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "products")
 public class Product {
 
-
     @Id
-    private int id;
+    private String id;
 
     private String name;
 
     private String description;
 
+    @NonNull
     private double price;
 
+    @NonNull
     private long quantity;
-    // Getters and Setters
-
 
     public Product() {
     }
 
-    public Product(int id, String name, String description, double price , long quantity) {
+    public Product(String id, String name, String description, double price , long quantity) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -39,11 +39,11 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -69,6 +69,17 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
     }
 }
 

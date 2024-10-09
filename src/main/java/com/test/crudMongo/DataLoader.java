@@ -35,7 +35,7 @@ public class DataLoader implements CommandLineRunner {
             csvReader.readNext(); // Skip header line
             while ((values = csvReader.readNext()) != null) {
                 Product product = new Product();
-                product.setId(Integer.parseInt(values[0]));
+                product.setId((values[0]));
                 product.setName(values[1]);
                 product.setDescription(values[2]);
                 product.setPrice(Double.parseDouble(values[3]));

@@ -13,12 +13,17 @@ public class ProductService {
     public ProductService(ProductRepository productRepository){
         this.productRepository=productRepository;
     }
+
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
 
-    public Optional<Product> getProductById(int id) {
+    public Optional<Product> getProductById(String id) {
 
         return Optional.ofNullable(productRepository.findById(id).orElseThrow(() -> new RuntimeException("No data is present with this ID")));
+    }
+
+    public Product createProduct(Product product) {
+        return productRepository.save(product);
     }
 }
