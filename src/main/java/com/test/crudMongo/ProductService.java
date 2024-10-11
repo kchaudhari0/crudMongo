@@ -1,5 +1,6 @@
 package com.test.crudMongo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,5 +26,25 @@ public class ProductService {
 
     public Product createProduct(Product product) {
         return productRepository.save(product);
+    }
+
+    public Product updateProduct(String id,Product product) {
+        if(productRepository.existsById(id))
+        {
+            product.setId(id);
+            return productRepository.save(product);
+        }
+        else
+        {
+            throw new RuntimeException("No data is present with this ID");
+        }
+    }
+
+    public void deleteProduct(String id) {
+        productRepository.deleteById(id);
+    }
+
+    public List<Product> findProductsByName(String name) {
+        return productRepository.findAllByName(name);
     }
 }

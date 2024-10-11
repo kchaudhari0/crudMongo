@@ -33,4 +33,23 @@ public class ProductController {
     public Product createProduct(@RequestBody Product product) {
         return productService.createProduct(product);
     }
+
+    @PutMapping("/product/{id}")
+    public Product updateProduct(@PathVariable String id, @RequestBody Product product){
+        return productService.updateProduct(id , product);
+    }
+    
+    @DeleteMapping("/product/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable String id){
+        if (id == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST); // Or return an error response
+        }
+        productService.deleteProduct(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping("/search")
+    public List<Product> findProductsByName(@RequestParam String name) {
+        return productService.findProductsByName(name);
+    }
 }
